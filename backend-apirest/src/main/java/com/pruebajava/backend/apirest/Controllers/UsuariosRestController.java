@@ -35,6 +35,12 @@ public class UsuariosRestController {
 		return userServices.findByIdVUsuarios(id);
 	}	
 	
+
+	@GetMapping("/findByName/{name}")
+	public List<v_usuarios> findByName(@PathVariable String name){
+		return userServices.findByNameVUsuarios(name);
+	}	
+	
 	@GetMapping("/delete/{id}")
 	public List<v_usuarios> delete(@PathVariable Long id){
 		userServices.Delete(id);

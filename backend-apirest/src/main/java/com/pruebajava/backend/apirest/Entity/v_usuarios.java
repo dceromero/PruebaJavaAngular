@@ -16,7 +16,8 @@ public class v_usuarios implements Serializable {
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	private Long idUsuario;
-	private String name_rol;	private String nombre;
+	private String name_rol;	
+	private String nombre;
 	private char activo;
 	
 

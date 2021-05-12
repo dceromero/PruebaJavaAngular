@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.pruebajava.backend.apirest.DAO.IUsuariosDAO;
 import com.pruebajava.backend.apirest.DAO.IV_UsuariosDAO;
@@ -46,6 +47,12 @@ public class UsuariosServices implements IUsuariosServices {
 	public v_usuarios findByIdVUsuarios(Long id) {
 		// TODO Auto-generated method stub
 		return vuserDao.findById(id).orElse(null);
+	}
+	@Override
+	@Transactional
+	public List<v_usuarios> findByNameVUsuarios(String nombre) {
+		// TODO Auto-generated method stub
+		return vuserDao.buscarPorNombre(nombre);
 	}
 	
 	

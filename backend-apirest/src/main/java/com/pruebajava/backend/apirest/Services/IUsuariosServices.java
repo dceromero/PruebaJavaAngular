@@ -17,4 +17,6 @@ public interface IUsuariosServices {
 	public List<v_usuarios> findAll();
 
 	public v_usuarios findByIdVUsuarios(Long id);
+	
+	public List<v_usuarios> findByNameVUsuarios(String nombre);
 }
